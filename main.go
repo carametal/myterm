@@ -14,6 +14,7 @@ func main() {
 		Usage: "Integration cli commands",
 		Commands: []*cli.Command{
 			commands.SplitPane,
+			commands.MovePane,
 		},
 	}
 
