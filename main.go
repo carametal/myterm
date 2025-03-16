@@ -14,11 +14,23 @@ func main() {
 		Usage: "Integration cli commands",
 		Commands: []*cli.Command{
 			{
-				Name:    "split-pane",
-				Aliases: []string{"split", "sp"},
+				Name:    "split-pane-horizontal",
+				Aliases: []string{"splith", "sph", "sp"},
 				Usage:   "Split pane",
 				Action: func(cCtx *cli.Context) error {
 					err := exec.Command("wezterm", "cli", "split-pane", "--horizontal").Run()
+					if err != nil {
+						log.Fatal(err)
+					}
+					return nil
+				},
+			},
+			{
+				Name:    "split-pane-vertical",
+				Aliases: []string{"split", "spv"},
+				Usage:   "Split pane",
+				Action: func(cCtx *cli.Context) error {
+					err := exec.Command("wezterm", "cli", "split-pane").Run()
 					if err != nil {
 						log.Fatal(err)
 					}
