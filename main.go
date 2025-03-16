@@ -4,7 +4,7 @@ import (
 	"log"
 	"os"
 
-	commands "github.com/carametal/myterm/commnads"
+	"github.com/carametal/myterm/commands"
 	"github.com/urfave/cli/v2"
 )
 
